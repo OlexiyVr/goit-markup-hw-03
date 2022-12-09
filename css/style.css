@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff;
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -30,6 +30,18 @@ body {
   background-color: #ffffff;
   padding-top:24px;
   padding-bottom: 24px;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header nav{
+  display: flex;
+  align-items: center;
 }
 
 .header-link:hover {
@@ -45,12 +57,15 @@ a {
 }
 
 .headerlist {
-  list-style: none;
+  display: flex;
+  align-items: center
 }
 
 .link {
   text-decoration: none;
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 .logo-link {
@@ -60,6 +75,7 @@ a {
   line-height: 1.33;
   text-decoration: none;
   color: var(--h2h3-header-footer-color);
+  margin-right: 77px;
 }
 
 .logo {
@@ -73,6 +89,8 @@ a {
   letter-spacing: 0.02em;
   color: var(--h2h3-header-footer-color);
   text-decoration: none;
+  display: block;
+  padding: 0 20px;
 }
 
 .contacts:hover {
@@ -89,6 +107,9 @@ a {
   font-size: 16px;
   line-height: 1.5;
   color: var(--body-text-color);
+  display: block;
+  align-items: center;
+  margin: 0 20px;
 }
 
 /* HERO SECTION */
@@ -130,6 +151,7 @@ a {
   margin-bottom: 120px;
 }
 
+
 .about-title-top {
   position: absolute;
   white-space: nowrap;
@@ -144,7 +166,14 @@ a {
 }
 
 .about-list {
-  list-style: none;
+  display: flex;
+  justify-content:space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.about-list li{
+    max-width: 264px;
 }
 
 .about-title {
@@ -152,7 +181,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--h2h3-header-footer-color);
-  margin-bottom: 8px;
+  margin: 0 0 8px 0;
 }
 
 .about-text {
@@ -160,6 +189,7 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-text-color);
+  margin: 0;
 }
 
 /* SERVISE SECTION */
@@ -174,12 +204,16 @@ a {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--h2h3-header-footer-color);
-  margin-left: 557px;
+  margin-left: 360px;
   margin-bottom: 72px;
 }
 
 .service-img {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 /* TEAM SECTION */
@@ -199,7 +233,11 @@ a {
 }
 
 .team-photos {
-  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
 .team-photo {
@@ -234,7 +272,6 @@ a {
   background-color: var(--h2h3-header-footer-color);
   padding-top: 100px;
   padding-bottom: 100px;
-  padding-left: 156px;
 }
 
 .logo-link-footer {
@@ -274,7 +311,12 @@ a {
   list-style: none;
   margin-top: 96px;
   margin-bottom: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
 }
+
 
 .filter-button {
   font-family: inherit;
@@ -287,6 +329,8 @@ a {
   border: 1px solid #E7E9FC;
   border-radius: 4px;
   padding: 8px 16px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .filter-button:hover {
@@ -299,16 +343,6 @@ a {
   color: #ffffff;
 }
 
-.buttona {}
-
-.buttonb {}
-
-.buttonc {}
-
-.buttond {}
-
-.buttone {}
-
 /* Section Row-a,b,c */
 
 ul {
@@ -317,25 +351,43 @@ ul {
 
 .row-a {}
 
-.row-imga {}
+.row-imga {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -24px -10px;
+  padding: 0;
+  padding-bottom: 120px;
+}
 
-.row-title {
+.row-imgs{
+  margin: 24px 10px;
+  border: 0.5px solid #F4F4FD;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.row-title{
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--h2h3-header-footer-color);
+  margin-top: 32px;
+  margin-bottom: 8px;
+  padding-left: 16px;
 }
 
-.row-txt {
+.row-txt{
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-text-color);
+  padding-left: 16px;
+  margin-bottom: 32px;
 }
 
-.row-page-txt {
+.row-page-txt{
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  
 }
