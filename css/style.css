@@ -1,8 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 :root {
@@ -11,11 +9,15 @@ body {
   --body-text-color: #434455;
 }
 
-*,
-*::after *::before {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
@@ -90,7 +92,10 @@ a {
   color: var(--h2h3-header-footer-color);
   text-decoration: none;
   display: block;
-  padding: 0 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 40px;
 }
 
 .contacts:hover {
@@ -109,14 +114,18 @@ a {
   color: var(--body-text-color);
   display: block;
   align-items: center;
-  margin: 0 20px;
+}
+
+.contacts:last-child {
+  margin-left: 40px;
 }
 
 /* HERO SECTION */
 
 .hero {
   background-color: var(--h2h3-header-footer-color);
-  padding: 192px 457px;
+  padding: 192px;
+  text-align: center;
 }
 
 .hero-title {
@@ -127,7 +136,6 @@ a {
   display: block;
   margin: 0 auto;
   max-width: 496px;
-  text-align: center;
 }
 
 .header-btn {
@@ -141,14 +149,16 @@ a {
   cursor: pointer;
   padding: 16px 32px;
   border-radius: 4px;
-  display: block;
-  margin: 48px auto 0;
+  margin-top: 48px;
+  border: 0.5px solid #4d5ae5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* ABOUT SECTION */
 .about {
-  margin-top: 120px;
-  margin-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .about-title-top {
@@ -194,7 +204,7 @@ a {
 /* SERVISE SECTION */
 
 .service {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 
 .service-title {
@@ -203,22 +213,19 @@ a {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--h2h3-header-footer-color);
-  margin-left: 403px;
+  text-align: center;
   margin-bottom: 72px;
 }
 
 .service-img {
   list-style: none;
   display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
 }
 
-.service-img li{
-  border: 1px solid #E7E9FC;
-  background: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)), url(2368.jpg);
-  background-blend-mode: soft-light, normal;
+.service-img li {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-right: 24px;
 }
 
 /* TEAM SECTION */
@@ -233,23 +240,22 @@ a {
   font-size: 36px;
   line-height: 1.11;
   color: var(--h2h3-header-footer-color);
-  padding-left: 483px;
-  margin: 0 0 72px;
+  text-align: center;
+  margin-bottom: 72px;
 }
 
 .team-photos {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
 }
 
 .team-photo {
   background-color: #ffffff;
   max-width: 264px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+  margin-right: 24px;
 }
 
 .imgtxt {
@@ -301,6 +307,11 @@ a {
 
 /* Portfolio  Page*/
 /* Section Button Filtres */
+.prtf {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
 .portfolio-title-top {
   position: absolute;
   white-space: nowrap;
@@ -316,12 +327,14 @@ a {
 
 .filter-btn-list {
   list-style: none;
-  margin-top: 96px;
   margin-bottom: 72px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0;
+}
+
+.filter-btn-list li {
+  margin-right: 24px;
 }
 
 .filter-button {
@@ -335,8 +348,6 @@ a {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 8px 16px;
-  margin-left: 12px;
-  margin-right: 12px;
 }
 
 .filter-button:hover {
@@ -361,13 +372,16 @@ ul {
 .row-imga {
   display: flex;
   flex-wrap: wrap;
-  margin: -24px -10px;
   padding: 0;
-  padding-bottom: 120px;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
-.row-imgs {
-  margin: 24px 10px;
+.rowinf {
+  max-width: 360px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
   border: 0.5px solid #f4f4fd;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -377,9 +391,7 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--h2h3-header-footer-color);
-  margin-top: 32px;
-  margin-bottom: 8px;
-  padding-left: 16px;
+  padding-bottom: 8px;
 }
 
 .row-txt {
@@ -387,8 +399,6 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-text-color);
-  padding-left: 16px;
-  margin-bottom: 32px;
 }
 
 .row-page-txt {
