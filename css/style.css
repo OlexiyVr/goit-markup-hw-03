@@ -63,7 +63,7 @@ a {
   align-items: center;
 }
 
-.header-linkitem:not(:last-child) {
+.header-linkitem:not(:last-child){
   margin-right: 40px;
 }
 
