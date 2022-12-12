@@ -349,7 +349,7 @@ a {
   cursor: pointer;
   border: 1px solid #e7e9fc;
   border-radius: 4px;
-  padding: 8px 16px;
+  padding: 12px 24px;
 }
 
 .filter-button:hover {
